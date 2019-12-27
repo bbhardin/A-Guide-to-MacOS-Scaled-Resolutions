@@ -1,0 +1,1 @@
+# A-Guide-to-MacOS-Scaled-Resolutions
