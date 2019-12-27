@@ -126,6 +126,8 @@ Email: bbhardin1@gmail.com
 
 [Instagram](https://www.instagram.com/ben__hardin/)
 
-One huge shout-out to this article:
+**One huge shout-out to this article:**
+
 https://comsystoreply.de/blog-post/force-hidpi-resolutions-for-dell-u2515h-monitor
-This developer created the tool to create the scaled resolutions and their knowledge helped me immensely when getting this working.
+
+This developer created the tool to generate the scaled resolutions. Their knowledge helped me immensely when getting this working.
