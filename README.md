@@ -21,7 +21,10 @@ Additionally, if you are running MacOS 10.15 Catalina or newer, system files are
 	
 `killall Finder`
 
+![Image of Terminal Commands](https://github.com/BetaBen1/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/terminal.png)
+
 Now the system hard drive partition should be modifiable by the user.
+
 
 ### Step 2: Download RDM
 
@@ -32,7 +35,8 @@ To bypass this and actually show all options for screen resolution, there are se
 Once you have downloaded and installed RDM, it will run as a menu bar application. It will allow you to see all the options for your screen resolution.
 
 Here’s what RDM looks like on my system running a 1440p monitor with some custom HiDPI resolutions I’ve created.
- 
+![Image of RDM](https://github.com/BetaBen1/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/RDM.png)
+
 
 ### Step 3: Enable HiDPI
 
@@ -42,7 +46,10 @@ If HiDPI is enabled you will see lightning bolt emojis next to resolutions in RD
 
 Another option to check if HiDPI is enabled is under Displays in System Preferences. Under the Display tab, hold the Option key while selecting Scaled. It will show several resolution options that MacOS suggests for your monitor. If HiDPI is enabled on your system, you will likely see a resolution that is ½ the size of your monitor’s native resolution that has “(HiDPI)” next to the resolution. 
 
-What you will notice is that the largest HiDPI option for a 1440p monitor will likely be 720p which is a two times scale. In order to add different ones, we will need to modify the file that contains these values.
+![Image of Display Options in System Preferences](https://github.com/BetaBen1/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/sys_pref_display.png)
+
+The largest HiDPI option for a 1440p monitor will likely be 720p which is a two times scale. In order to add different ones, we will need to modify the file that contains these values.
+
 
 ### Step 4: Locate your display file
 
@@ -51,12 +58,17 @@ Under Displays in System Preferences, select the tab Color. Select the default c
 A ColorSync Utility window opens with the selected profile. Scroll to the last line in the file which should have a description of “Apple display make and model information.”
 
 The important pieces of information we want from this screen are the Manufacturer and Model tags. This will allow us to find in the system what file is being used to supply the resolutions.
+
+![Image of Display Color Profile](https://github.com/BetaBen1/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/color_profile.png)
  
 Record the non-zero values in the Manufacturer and Model fields. For example, my Acer monitor with my Hackintosh is 472 and 416 or my monitor with my MacBook Pro is 620 and A022.
 
 Navigate to the highest folder in your hard drive and then to System > Library > Displays > Contents > Resources > Overrides. Then navigate to the folder that is DisplayVendorID- with the Manufacturer number of your color profile on the end. Inside this folder should be a file that is DisplayProductID- with the Model number of your color profile on the end. This file will contain the resolutions that your computer can support for monitors.
+
+![Image of Display File Location](https://github.com/BetaBen1/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/file_location.png)
  
 However, if your monitor is like mine and is a cheaper, less-popular model it is likely that a file with the specified name does not exist. In this case, you will have to create the file. Thankfully, someone has created a website for this.
+
 
 ### Step 5: That website for resolutions
 
@@ -67,8 +79,12 @@ So let’s create the resolutions. Head to https://comsysto.github.io/Display-Ov
 Type the color profile model that we found earlier under the DisplayProductID field and the color profile manufacturer under the DisplayVendorID field. Next add desired resolutions. Make sure all resolutions have HiDPI selected.
 
 Here’s what I generated for my system based on my monitor and the resolutions I desired:
+
+![Image of Generator Website](https://github.com/BetaBen1/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/generator.png)
+
  
 If your system already has the file for your display, I would recommend creating just the new resolutions you want and copying those lines into the existing file. Otherwise, click the button in the bottom right to download the file. Save it somewhere that you will remember. Do not change the name, as the generator creates the correct name for the device.
+
 
 ### Step 6: Change display file
 
@@ -77,12 +93,17 @@ If your system already has the file for your display, I would recommend creating
 Before you change the display file, make sure to create a copy.
 Create a copy on your desktop of the original file in case something was to go wrong and you needed to reset to the original.
 Duplicate this newly created copy. This will be the file that we change.
+
 Open the file with a text editor and locate the section titled <key>scale-resolutions</key>. Under this is the section <array></array> which holds all of the values for the resolutions that appear in the scaled resolutions options in System Preferences. Between the array tags copy the resolutions from the website. There should already be some resolutions there.
 This section of the file should look similar to the below image although you may not have as many resolutions there.
+
+![Image of Resolutions plist](https://github.com/BetaBen1/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/res_plist.png)
+
  	
 **If the file does not already exist:**
 
 Copy the downloaded file into the system folder we found in Step 4 that should contain the file. If the information is put into the website correctly, the downloaded file will be readable by the computer and no editing is necessary.
+
 
 ### Step 7: Reboot
 Reboot the machine for the changes to take effect. If the file’s name and location are correct for your system, then MacOS should automatically recognize the file and see the new resolutions. Open RDM and select the resolution you wish to use. And viola! Now you can create scaled resolutions.
