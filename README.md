@@ -4,7 +4,7 @@
 
 ## Background
 
-I am an Apple fanatic and avid Mac user, but something has always frustrated me about MacOS. Unlike Windows, MacOS is unable to natively create custom scaled resolutions without losing pixel density. However, there is a catch: If Apple deems the display to be “Retina” then you get a different resolution selector with options for “More Space” and “Less Space” that is effectively scaling the display without losing pixel density.
+Despite being an Apple fanatic and avid Mac user, something has always frustrated me about MacOS. Unlike Windows, MacOS is unable to natively create custom scaled resolutions without losing pixel density. However, there is a catch: If Apple deems the display to be “Retina” then you get a different resolution selector with options for “More Space” and “Less Space” that is effectively scaling the display without losing pixel density.
 
 This can be frustrating when MacOS decides that a high-resolution monitor is not classified as “Retina” and cannot therefore have scaled resolutions. I personally experienced this. I have a 25” Acer G257HU monitor with a resolution 2560x1440p. Running at 1440p, no text items along menu bars appear too small and are hardly readable from a significant distance. However, since it is not deemed a “Retina” monitor the only true resolution-preserving options that appear are 2x, 3x, etc. zoom. This would leave me with a scaled resolution of 720p which is much too large. What I want is a nice scaled resolution of around 125% that would give me the scale of 1080p.
 
