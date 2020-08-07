@@ -124,7 +124,8 @@ After a reboot the system files are no longer modifiable. You will need to run t
 
 Feel free to contact me if you find this helpful or have more questions. I’d love to hear your feedback!
 
-Email: ![Image of email](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/email.png)
+Email: 
+![Image of email](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/email.png)
 
 [Twitter](https://twitter.com/Ben_Hardin1)
 
