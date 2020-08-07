@@ -54,6 +54,12 @@ Another option to check if HiDPI is enabled is under Displays in System Preferen
 
 The largest HiDPI option for a 1440p monitor will likely be 720p which is a 2x scale. In order to add different resolutions, we will need to modify the file that contains these values.
 
+If HiDPI is not enabled, you can run:
+
+`sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true`
+
+Restart the system to enable.
+
 
 ### Step 4: Locate the Display File
 
@@ -118,7 +124,7 @@ After a reboot the system files are no longer modifiable. You will need to run t
 
 Feel free to contact me if you find this helpful or have more questions. I’d love to hear your feedback!
 
-Email: bbhardin1@gmail.com
+Email: ![Image of email](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/email.png)
 
 [Twitter](https://twitter.com/Ben_Hardin1)
 
