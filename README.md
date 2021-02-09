@@ -1,16 +1,16 @@
 # A Guide To Creating Scaled Resolutions in MacOS
 
-**WARNING:** Try this at your own risk. I am not an expert in display hardware and am not responsible for damage any damage to components or system files.
+**WARNING:** Try this at your own risk. I am not an expert in display hardware and am not responsible for any damage to components or system files. Additionally, this may place a greater burden on your graphics card.
 
 ## Background
 
 Despite being an Apple fanatic and avid Mac user, something has always frustrated me about MacOS. Unlike Windows, MacOS is unable to natively create custom scaled resolutions without losing pixel density. However, there is a catch: If Apple deems the display to be “Retina” then you get a different resolution selector with options for “More Space” and “Less Space” that is effectively scaling the display without losing pixel density.
 
-This can be frustrating when MacOS arbitrarily decides that a high-resolution monitor is not classified as “Retina” and cannot therefore have scaled resolutions. I personally experienced this. I have a 25” Acer G257HU monitor with a resolution 2560x1440. Running at 1440p, items along the menu bar appear too small and are hardly readable from a significant distance. However, since it is not deemed a “Retina” monitor the only true resolution-preserving options that appear are 2x, 3x, etc. zoom. This would leave me with a scaled resolution of 720p which is much too large. What I want is a scaled resolution of around 125% that would give me the scale of 1080p.
+This can be frustrating when MacOS arbitrarily decides that a high-resolution monitor is not classified as “Retina” and cannot therefore have scaled resolutions. I have a 25” Acer G257HU monitor with a resolution 2560x1440. Running at 1440p, items along the menu bar appear too small and are hardly readable from a significant distance. However, since it is not deemed a “Retina” monitor the only true resolution-preserving options that appear are 2x, 3x, etc. zoom. This would leave me with a scaled resolution of 720p which is too large. What I want is a scaled resolution of around 125% that would give me the scale of 1080p.
 
 ![Image of Retina Display Comparison](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/retina_compare.png)
 
-I knew this had to be possible since Apple’s own ancient thunderbolt display can do it. It also runs at a resolution of 1440p yet has the Retina scaling options of “More Space” or “Less Space” that allow it to preserve resolution.
+I knew this had to be possible since Apple’s own ancient thunderbolt display can do it. It runs at a resolution of 1440p yet has the Retina scaling options of “More Space” or “Less Space” that allow it to preserve resolution.
 Thus began my hunt off-and-on for over a year that resulted in me reading many articles and corrupting many system files in my computer to no avail until I finally figured it out. Because of the time and effort I went through to get this working, I wanted to share the process for any other curious individuals interested in creating scaled resolutions. The steps are actually relatively straightforward although somewhat finnicky.
 
 
