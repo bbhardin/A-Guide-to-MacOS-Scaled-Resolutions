@@ -2,6 +2,8 @@
 
 **WARNING:** Try this at your own risk. I am not an expert in display hardware and am not responsible for any damage to components or system files. Additionally, this may place a greater burden on your graphics card.
 
+**Update:** This process still works for Big Sur, albiet with a small modification. Apple Silicon support is still uncertain as I do not have a platform to test on.
+
 ## Background
 
 Despite being an Apple fanatic and avid Mac user, something has always frustrated me about MacOS. Unlike Windows, MacOS is unable to natively create custom scaled resolutions without losing pixel density. However, there is a catch: If Apple deems the display to be “Retina” then you get a different resolution selector with options for “More Space” and “Less Space” that is effectively scaling the display without losing pixel density.
@@ -73,11 +75,14 @@ The pieces of information we want from this screen are the Manufacturer and Mode
  
 Record the non-zero values in the Manufacturer and Model fields. For example, my Acer monitor with my Hackintosh is 472 and 416 or my monitor with my MacBook Pro is 620 and A022.
 
-Navigate to `System/Library/Displays/Contents/Resources/Overrides/`. Then navigate to the folder that is DisplayVendorID- with the Manufacturer number of your color profile on the end. Inside this folder should be a file that is DisplayProductID- with the Model number of your color profile on the end. This file will contain the resolutions that your computer can display.
+**Big Sur 11.0 and above:** Navigate to `/Library/Displays/Contents/Resources/Overrides/`
+**Catalina 10.15 and below:** Navigate to `/System/Library/Displays/Contents/Resources/Overrides/`
+
+Navigate to the folder that is DisplayVendorID- with the Manufacturer number of your color profile on the end. Inside this folder should be a file that is DisplayProductID- with the Model number of your color profile on the end. This file will contain the resolutions that your computer can display.
 
 ![Image of Display File Location](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/file_location.png)
  
-However, if your monitor is a cheaper, less-popular model like mine it is likely that a file with the specified name does not exist. In this case, you will have to create the file. Thankfully, someone has made a website for this.
+However, a file with the specified name may not exist. In this case, you will have to create the file. Thankfully, someone has made a website for this.
 
 
 ### Step 5: Generate Resolutions
