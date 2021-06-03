@@ -64,7 +64,7 @@ Restart the system to enable.
 
 
 ### Step 4: Determine Your Display
-There are two methods, manually finding the file or downloading Hackintool. Manually finding the file may not work for some monitors where color profile information is missing.
+There are two methods: downloading Hackintool or manually locating the display information. Manually locating the information may not work for some monitors where color profile information is missing.
 
 #### Hackintool Method
 Download Hackintool from https://github.com/headkaze/Hackintool/releases.
