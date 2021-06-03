@@ -63,8 +63,17 @@ If HiDPI is not enabled, you can run:
 Restart the system to enable.
 
 
-### Step 4: Locate the Display File
+### Step 4: Determine Your Display
+There are two methods, manually finding the file or downloading Hackintool. Manually finding the file may not work for some monitors where color profile information is missing.
 
+#### Hackintool Method
+Download Hackintool from https://github.com/headkaze/Hackintool/releases.
+
+Open Hackintool and select the Displays tab. Under this tab, all of the displays connected to the computer will be listed with their Vendor and Product IDs. Remember these values for your external monitor. They will be used for locating your display file.
+
+![Image of Hackintool Displays Tab](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/hackintool_displays.png)
+
+#### Manual Method
 Under Displays in System Preferences, select the tab Color. Select the default color profile for your computer (usually called “Color LCD” or the name of your monitor) and click Open Profile.
 
 A ColorSync Utility window opens with the selected profile. Scroll to the last line in the file which should have a description of “Apple display make and model information.”
@@ -74,6 +83,8 @@ The pieces of information we want from this screen are the Manufacturer and Mode
 ![Image of Display Color Profile](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/color_profile.png)
  
 Record the non-zero values in the Manufacturer and Model fields. For example, my Acer monitor with my Hackintosh is 472 and 416 or my monitor with my MacBook Pro is 620 and A022.
+
+### Step 5: Locate Your Display File
 
 **Big Sur 11.0 and above:** Navigate to `/Library/Displays/Contents/Resources/Overrides/`
 **Catalina 10.15 and below:** Navigate to `/System/Library/Displays/Contents/Resources/Overrides/`
@@ -85,7 +96,7 @@ Navigate to the folder that is DisplayVendorID- with the Manufacturer number of 
 However, a file with the specified name may not exist. In this case, you will have to create the file. Thankfully, someone has made a website for this.
 
 
-### Step 5: Generate Resolutions
+### Step 6: Generate Resolutions
 
 Here’s the most important part that was hindering me for a long time because I couldn’t seem to find it posted anywhere. **You need to create BOTH the scaled HiDPI resolution that you want and DOUBLE that resolution.**
 
@@ -103,7 +114,7 @@ Here’s what I generated for my system based on my monitor and the resolutions 
 If your system already has the file for your display, I recommend creating only the new resolutions you want and copying those lines into the existing file. Otherwise, click the button in the bottom right to download the file. Save it somewhere memorable. Do not change the name, as the generator creates the correct name for your monitor.
 
 
-### Step 6: Change Display File
+### Step 7: Change Display File
 
 **If the file already exists:**
 
@@ -120,7 +131,7 @@ This section of the file should look similar to the below image although you may
 Copy the downloaded file into the system folder we found in Step 4 that should contain the file. If the information is put into the website correctly, the downloaded file will be readable by the computer and no editing is necessary.
 
 
-### Step 7: Reboot
+### Step 8: Reboot
 Reboot the machine for the changes to take effect. If the file’s name and location are correct for your system, then MacOS should automatically recognize the file and see the new resolutions. Open RDM and select the resolution you wish to use. And voila! Now you can use scaled resolutions.
 
 After a reboot the system files are no longer modifiable. You will need to run the terminal command from Step 1 after each reboot if you would like to modify the file. System Integrity Protection (SIP) will likely stay disabled until the next MacOS update modifies the recovery partition. If you would like to reenable SIP, the link from Step 1 details the process to reenable SIP.
