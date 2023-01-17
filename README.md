@@ -22,10 +22,11 @@ Thus began my hunt off-and-on for over a year that resulted in me reading many a
 
 In order to complete this process, you will need to have full Administrative access to your computer. iMore has a [helpful article](https://www.imore.com/how-turn-system-integrity-protection-macos) detailing the steps to disable System Integrity Protection which is necessary to modify system files.
 
-Additionally, if you are running MacOS 10.15 Catalina or newer, system files are not modifiable by the user for safety. To bypass this, open terminal and type the following commands:
+If you are running MacOS 11 Big Sur or later, you will not be able to modify system files in the /System/Library directory. You will be working in the /Library directory instead.
+
+For MacOS 10.15 Catalina, to make system files writable you will need to open terminal and type the following commands:
 
 `sudo mount -uw /`
-	
 `killall Finder`
 
 ![Image of Terminal Commands](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/terminal.png)
