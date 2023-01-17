@@ -27,6 +27,7 @@ If you are running MacOS 11 Big Sur or later, you will not be able to modify sys
 For MacOS 10.15 Catalina, to make system files writable you will need to open terminal and type the following commands:
 
 `sudo mount -uw /`
+
 `killall Finder`
 
 ![Image of Terminal Commands](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/terminal.png)
