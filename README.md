@@ -146,9 +146,7 @@ Email:
 
 ![Image of email](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/email.png)
 
-[Twitter](https://twitter.com/Ben_Hardin1)
-
-[Instagram](https://www.instagram.com/ben__hardin/)
+[Twitter](https://twitter.com/b_b_hardin)
 
 **One huge shout-out to this article:**
 
