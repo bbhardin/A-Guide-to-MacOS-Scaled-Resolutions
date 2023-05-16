@@ -80,7 +80,7 @@ Under Displays in System Preferences, select the tab Color. Select the default c
 
 A ColorSync Utility window opens with the selected profile. Scroll to the last line in the file which should have a description of “Apple display make and model information.”
 
-The pieces of information we want from this screen are the Manufacturer and Model tags. This will allow us to find in the system what file is being used to supply the resolutions.
+The pieces of information we want from this screen are the Manufacturer and Model tags. This will allow us to find what file is being used to supply the resolutions to the system.
 
 ![Image of Display Color Profile](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/color_profile.png)
  
@@ -89,20 +89,21 @@ Record the non-zero values in the Manufacturer and Model fields. For example, my
 ### Step 5: Locate Your Display File
 
 **Big Sur 11.0 and above:** Navigate to `/Library/Displays/Contents/Resources/Overrides/`
+
 **Catalina 10.15 and below:** Navigate to `/System/Library/Displays/Contents/Resources/Overrides/`
 
-Navigate to the folder that is DisplayVendorID- with the Manufacturer number of your color profile on the end. Inside this folder should be a file that is DisplayProductID- with the Model number of your color profile on the end. This file will contain the resolutions that your computer can display.
+Navigate to the folder called DisplayVendorID- with the Manufacturer number of your color profile on the end. Inside this folder should be a file that is DisplayProductID- with the Model number of your color profile on the end. This file will contain the resolutions that your computer can display.
 
 ![Image of Display File Location](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/file_location.png)
  
-However, a file with the specified name may not exist. In this case, you will have to create the file. Thankfully, someone has made a website for this.
+However, do not fear if this file does not exist. In this case, you will have to create the file. Thankfully, someone has made a website for this.
 
 
 ### Step 6: Generate Resolutions
 
 Here’s the most important part that was hindering me for a long time because I couldn’t seem to find it posted anywhere. **You need to create BOTH the scaled HiDPI resolution that you want and DOUBLE that resolution.**
 
-For instance, I wanted my 1440p monitor to scale to 1080p so I needed to create entries for 1920x1080p HiDPI as well as for 3840x2160p HiDPI. Without the 2160p entry, my monitor would not accept 1080p as a HiDPI option. This had me stuck for an obnoxiously long time. Weird. I suspect this tricks MacOS into believing it is a true 2x scaling and thus is allowed instead of a weird scaling value.
+For instance, I wanted my 1440p monitor to scale to 1080p so I needed to create entries for 1920x1080p HiDPI as well as for 3840x2160p HiDPI. Without the 2160p entry, my monitor would not accept 1080p as a HiDPI option. This had me stuck for an obnoxiously long time. Weird. I suspect this tricks MacOS into believing it is a true 2x scaling and thus is allowed instead of an arbitrary scaling value.
 
 So let’s create the resolutions. Head to https://comsysto.github.io/Display-Override-PropertyList-File-Parser-and-Generator-with-HiDPI-Support-For-Scaled-Resolutions/.
 
@@ -112,7 +113,6 @@ Here’s what I generated for my system based on my monitor and the resolutions 
 
 ![Image of Generator Website](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/generator.png)
 
- 
 If your system already has the file for your display, I recommend creating only the new resolutions you want and copying those lines into the existing file. Otherwise, click the button in the bottom right to download the file. Save it somewhere memorable. Do not change the name, as the generator creates the correct name for your monitor.
 
 
@@ -130,7 +130,7 @@ This section of the file should look similar to the below image although you may
  	
 **If the file does not already exist:**
 
-Copy the downloaded file into the system folder we found in Step 4 that should contain the file. If the information is put into the website correctly, the downloaded file will be readable by the computer and no editing is necessary.
+Copy the downloaded file into the system folder we found in Step 4 (/Library/Displays/Contents/Resources/Overrides/...) that should contain the file. If the information is put into the website correctly, the downloaded file will be readable by the computer and no editing is necessary.
 
 
 ### Step 8: Reboot
