@@ -136,7 +136,7 @@ Copy the downloaded file into the system folder we found in Step 4 that should c
 ### Step 8: Reboot
 Reboot the machine for the changes to take effect. If the file’s name and location are correct for your system, then MacOS should automatically recognize the file and see the new resolutions. Open RDM and select the resolution you wish to use. And voila! Now you can use scaled resolutions.
 
-After a reboot the system files are no longer modifiable. You will need to run the terminal command from Step 1 after each reboot if you would like to modify the file. System Integrity Protection (SIP) will likely stay disabled until the next MacOS update modifies the recovery partition. If you would like to reenable SIP, the link from Step 1 details the process to reenable SIP.
+After a reboot the system files are no longer modifiable. System Integrity Protection (SIP) will likely stay disabled until the next MacOS update modifies the recovery partition. If you would like to reenable SIP, the link from Step 1 details the process to reenable SIP.
 
 ## Final Thoughts
 
