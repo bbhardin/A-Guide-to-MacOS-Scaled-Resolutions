@@ -2,7 +2,7 @@
 
 **WARNING:** Try this at your own risk. I am not an expert in display hardware and am not responsible for any damage to components or system files. Additionally, this may place a greater burden on your graphics card.
 
-***Update (12/30/22):*** This process still works for MacOS Ventura, as well as for Apple Silicon! This guide will be updated in the coming days to better detail the process.
+***Update (May 16, 2023):*** This process still works for MacOS Ventura, as well as for Apple Silicon! This guide has been updated with a new and hopefully easier process for scaled reslutions, but check out previous versions for past OS versions. 
 
 ## Background
 
@@ -45,14 +45,14 @@ Here’s what RDM looks like on my system running a 1440p monitor with some cust
 
 ![Image of RDM](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/RDM.png)
 
+In case you don't want to use RDM, there are some other nice tools like [SwitchResX](https://www.madrau.com/), [EasyRes](https://apps.apple.com/us/app/easyres/id688211836?mt=12), or [QuickRes](https://thnkdev.com/QuickRes). I have not used these tools enough to verify them, but you may wish to check them out.
+
 
 ### Step 3: Enable HiDPI
 
 In order for your Mac to support scaling, it must have the option for HiDPI (a.k.a. scaled) resolutions turned on. Most newer Macs will have it turned on as default.
 
-If HiDPI is enabled you will see lightning bolt emojis next to resolutions in RDM as can be seen in my screenshot from above. This means that these resolutions are full-quality scaled Hi-DPI resolutions.
-
-Another option to check if HiDPI is enabled is under Displays in System Preferences. Under the Display tab, hold the Option key while selecting Scaled. It will show several resolution options that MacOS suggests for your monitor. If HiDPI is enabled on your system, you will likely see a resolution that is ½ the size of your monitor’s native resolution that has “(HiDPI)” next to the resolution. 
+If HiDPI is enabled you will see lightning bolt emojis next to resolutions in RDM as can be seen in my screenshot from above. This means that these resolutions are full-quality scaled Hi-DPI resolutions. Another way to check if HiDPI status is under Displays in System Preferences. If the resolutions are not already listed, go to Advanced and enable "Show resolutions as a list." Click Done and on the Displays page, enable "Show all resolutions." It will show several resolution options that MacOS suggests for your monitor. If HiDPI is enabled on your system, you will likely see a resolution that is ½ the size of your monitor’s native resolution that has “(HiDPI)” listed next to the resolution. 
 
 ![Image of Display Options in System Preferences](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/sys_pref_display.png)
 
