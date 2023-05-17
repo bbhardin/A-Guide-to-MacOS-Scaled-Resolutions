@@ -22,15 +22,13 @@ Thus began my hunt off-and-on for over a year that resulted in me reading many a
 
 In order to complete this process, you will need to have full Administrative access to your computer. iMore has a [helpful article](https://www.imore.com/how-turn-system-integrity-protection-macos) detailing the steps to disable System Integrity Protection which is necessary to modify system files.
 
-If you are running MacOS 11 Big Sur or later, you will not be able to modify system files in the /System/Library directory. You will be working in the /Library directory instead.
+**If you are running MacOS 11 Big Sur or later**, you will not be able to modify system files in the /System/Library directory. You will be working in the /Library directory instead.
 
-For MacOS 10.15 Catalina, to make system files writable you will need to open terminal and type the following commands:
+**For MacOS 10.15 Catalina and below**, to make system files writable you will need to open terminal and type the following commands:
 
 `sudo mount -uw /`
 
 `killall Finder`
-
-![Image of Terminal Commands](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/terminal.png)
 
 Now the system hard drive partition should be modifiable by the user.
 
@@ -39,7 +37,7 @@ Now the system hard drive partition should be modifiable by the user.
 
 Sometimes System Preferences does not show all of the resolutions possible with your monitor. To bypass this, there are several free utilities that can be used. One I have found to work well is [RDM](https://github.com/avibrazil/RDM).
 
-Once you have downloaded and installed RDM, it will run as a menu bar application. It allows you to see all the options for your screen resolution.
+Once you have installed RDM, it will run as a menu bar application. It allows you to see all the options for your screen resolution.
 
 Here’s what RDM looks like on my system running a 1440p monitor with some custom HiDPI resolutions I’ve created:
 
@@ -50,7 +48,7 @@ In case you don't want to use RDM, there are some other nice tools like [SwitchR
 
 ### Step 3: Enable HiDPI
 
-In order for your Mac to support scaling, it must have the option for HiDPI (a.k.a. scaled) resolutions turned on. Most newer Macs will have it turned on as default.
+In order for your Mac to support scaling, it must have the option for HiDPI (a.k.a. scaled) resolutions turned on. Most newer Macs will have it turned on by default.
 
 If HiDPI is enabled you will see lightning bolt emojis next to resolutions in RDM as can be seen in my screenshot from above. This means that these resolutions are full-quality scaled Hi-DPI resolutions. Another way to check if HiDPI status is under Displays in System Preferences. If the resolutions are not already listed, go to Advanced and enable "Show resolutions as a list." Click Done and on the Displays page, enable "Show all resolutions." It will show several resolution options that MacOS suggests for your monitor. If HiDPI is enabled on your system, you will likely see a resolution that is ½ the size of your monitor’s native resolution that has “(HiDPI)” listed next to the resolution. 
 
