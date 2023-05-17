@@ -78,6 +78,9 @@ Under Displays in System Preferences, note which color profile is being used. Se
 
 If you are running Ventura or above, open ColorSync Utility manually, navigate to the Devices tab, select the Color Profile under Displays, and on the right panel click Open next to the path of color profile file to open the detailed color profile file.
 
+
+<img src="https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/color_sync_utility.png" data-canonical-src="https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/color_sync_utility.png" width="60%" />
+
 Scroll to the last line in the file which should be called “Apple display make and model information.” Unfortunately, this item does not always exist.
 
 The pieces of information we want from this screen are the Manufacturer and Model tags. This will allow us to find what file is being used to supply the resolutions to the system.
