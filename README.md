@@ -1,4 +1,4 @@
-# A Guide To Creating Scaled Resolutions in MacOS
+# A Guide for Creating Scaled Resolutions in MacOS
 
 **WARNING:** Try this at your own risk. I am not an expert in display hardware and am not responsible for any damage to components or system files. Additionally, this may place a greater burden on your graphics card.
 
@@ -74,9 +74,11 @@ Open Hackintool and select the Displays tab. Under this tab, all of the displays
 ![Image of Hackintool Displays Tab](https://github.com/bbhardin/A-Guide-to-MacOS-Scaled-Resolutions/blob/master/Images/hackintool_displays.png)
 
 #### Manual Method
-Under Displays in System Preferences, select the tab Color. Select the default color profile for your computer (usually called “Color LCD” or the name of your monitor) and click Open Profile.
+Under Displays in System Preferences, note which color profile is being used. Select the default color profile for your computer (usually called “Color LCD” or the name of your monitor). If you are running a version below Ventura, select Open Profile.
 
-A ColorSync Utility window opens with the selected profile. Scroll to the last line in the file which should have a description of “Apple display make and model information.”
+If you are running Ventura or above, open ColorSync Utility manually, navigate to the Devices tab, select the Color Profile under Displays, and on the right panel click Open next to the path of color profile file to open the detailed color profile file.
+
+Scroll to the last line in the file which should be called “Apple display make and model information.” Unfortunately, this item does not always exist.
 
 The pieces of information we want from this screen are the Manufacturer and Model tags. This will allow us to find what file is being used to supply the resolutions to the system.
 
