@@ -2,7 +2,7 @@
 
 **WARNING:** Try this at your own risk. I am not an expert in display hardware and am not responsible for any damage to components or system files. Additionally, this may place a greater burden on your graphics card.
 
-**Update (Dec 11, 2013):** I highly recommend you ignore this entire guide and download [BetterDisplay 2](betterdisplay.pro)! It's a fantastic application with lots of customization and Apple design language that makes this process a breeze.
+**Update (Dec 11, 2013):** I highly recommend you ignore this entire guide and download [BetterDisplay 2](https://betterdisplay.pro)! It's a fantastic application with lots of customization and Apple design language that makes this process a breeze.
 
 ***Update (May 16, 2023):*** This process still works for MacOS Ventura, as well as for Apple Silicon! This guide has been updated with a new and hopefully easier process for scaled reslutions, but check out previous versions for past OS versions. 
 
